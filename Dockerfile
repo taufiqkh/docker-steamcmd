@@ -18,3 +18,4 @@ ARG HOME=/home/$STEAM_USER
 RUN mkdir $HOME/steamcmd
 WORKDIR $HOME/steamcmd
 RUN curl --silent $STEAMCMD_URL | tar -zxv
+RUN ./steamcmd.sh +login anonymous +quit
